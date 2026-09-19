@@ -65,33 +65,34 @@ const { title, description, page = 'home' } = Astro.props;
       const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       const heroVideo = document.querySelector('[data-hero-video]');
       const heroReplay = document.querySelector('[data-hero-replay]');
-      const holdFinalFrame = () => {
-        if (!(heroVideo instanceof HTMLVideoElement) || !Number.isFinite(heroVideo.duration)) return;
-        heroVideo.currentTime = Math.max(0, heroVideo.duration - 0.04);
+      const showFinalFrame = () => {
+        if (!(heroVideo instanceof HTMLVideoElement)) return;
         heroVideo.pause();
         heroVideo.dataset.ended = 'true';
-        if (heroReplay instanceof HTMLButtonElement && !motionQuery.matches) heroReplay.hidden = false;
+        if (heroReplay instanceof HTMLButtonElement) heroReplay.hidden = false;
       };
-      const configureHeroVideo = () => {
+      const playHeroVideo = () => {
         if (!(heroVideo instanceof HTMLVideoElement)) return;
         heroVideo.muted = true;
+        heroVideo.defaultMuted = true;
         heroVideo.loop = false;
-        if (motionQuery.matches) {
-          if (heroReplay instanceof HTMLButtonElement) heroReplay.hidden = true;
-          heroVideo.removeAttribute('autoplay');
-          heroVideo.pause();
-          if (heroVideo.readyState >= 1) holdFinalFrame();
-          else heroVideo.addEventListener('loadedmetadata', holdFinalFrame, { once: true });
-          return;
-        }
+        delete heroVideo.dataset.ended;
         heroVideo.play().catch(() => {
           heroVideo.dataset.autoplayBlocked = 'true';
           if (heroReplay instanceof HTMLButtonElement) heroReplay.hidden = false;
         });
       };
-      heroVideo?.addEventListener('ended', holdFinalFrame);
+      const configureHeroVideo = () => {
+        if (!(heroVideo instanceof HTMLVideoElement)) return;
+        heroVideo.muted = true;
+        heroVideo.defaultMuted = true;
+        heroVideo.loop = false;
+        if (heroVideo.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) playHeroVideo();
+        else heroVideo.addEventListener('canplaythrough', playHeroVideo, { once: true });
+      };
+      heroVideo?.addEventListener('ended', showFinalFrame);
       heroReplay?.addEventListener('click', () => {
-        if (!(heroVideo instanceof HTMLVideoElement) || motionQuery.matches) return;
+        if (!(heroVideo instanceof HTMLVideoElement)) return;
         heroReplay.hidden = true;
         delete heroVideo.dataset.ended;
         heroVideo.currentTime = 0;

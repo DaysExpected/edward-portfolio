@@ -365,8 +365,5 @@ figcaption { margin-top: 7px; color: var(--muted); font-size: 9px; letter-spacin
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  .hero-media { display: none; }
-  .hero-reduced-poster { display: block; opacity: 1; }
-  .hero-replay { display: none; }
   .reveal-item { opacity: 1 !important; transform: none !important; }
 }
