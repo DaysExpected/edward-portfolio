@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArrowIcon from '../components/ArrowIcon.astro';
+
+const sheets = [
+  ['01', '管理层结论', 'Management Summary'], ['02', '参数与情景', 'Parameters & Scenarios'],
+  ['03', '月度产能', 'Monthly Capacity'], ['04', '客户贡献', 'Customer Contribution'],
+  ['05', '产品结构', 'Product Mix'], ['06', '工序负荷', 'Process Load'],
+  ['07', '进销存验证', 'Inventory Validation'], ['08', '数据审计', 'Data Audit'],
+  ['09', '敏感性分析', 'Sensitivity Analysis'],
+];
+
+const capabilities = [
+  ['01', 'Cross-border Research', '跨境研究', 'Understanding buyers, markets, competitors and procurement logic in global markets.', '理解全球市场中的买家、竞品与采购逻辑。'],
+  ['02', 'Business Data', '业务数据', 'Turning complex operating data into clearer business questions and decisions.', '把复杂经营数据转化为更清晰的问题与判断。'],
+  ['03', 'AI Workflow', 'AI 工作流', 'Using AI to improve research, content creation and practical execution.', '用 AI 提升研究、内容生产与执行效率。'],
+  ['04', 'Content & Storytelling', '内容与叙事', 'Explaining real topics through English documentary-style content.', '通过英文纪录片式内容解释真实议题。'],
+];
+---
+
+<BaseLayout title="Edward Hu — Cross-border Research, Business Data & AI Workflow" description="Edward Hu's bilingual evidence-led portfolio across B2B market research, manufacturing analysis, serverless systems and content workflows.">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <video class="hero-media" autoplay muted playsinline preload="auto" poster="/media/identity/hero-sydney-start.webp" data-hero-video aria-hidden="true">
+      <source src="/media/identity/hero-sydney-once.mp4" type="video/mp4" />
+    </video>
+    <img class="hero-reduced-poster" src="/media/identity/hero-sydney-end.webp" alt="Edward Hu at Sydney Harbour" fetchpriority="high" />
+    <button class="hero-replay" type="button" data-hero-replay hidden aria-label="Replay hero video / 重播封面视频">
+      <span data-copy-en>Replay</span><span data-copy-zh>重播封面</span><span aria-hidden="true">↻</span>
+    </button>
+    <div class="hero-edge" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-kicker"><span data-copy-en>A MORE OPEN WORLD</span><span data-copy-zh>更开放的世界</span></div>
+      <h1 id="hero-title">Edward Hu</h1>
+      <p class="hero-lead" data-copy-en>Exploring business, systems<br />and stories across borders.</p>
+      <p class="hero-lead" data-copy-zh>在跨境商业、系统与内容之间，<br />持续构建真实项目。</p>
+      <p class="hero-support" data-copy-en>Focused on cross-border research, content and AI-assisted workflows.</p>
+      <p class="hero-support" data-copy-zh>关注跨境、内容、研究与 AI 工作流的个人实践。</p>
+      <a class="button button-on-dark" href="#work"><span data-copy-en>EXPLORE MY WORK</span><span data-copy-zh>查看我的项目</span><ArrowIcon /></a>
+    </div>
+    <div class="hero-location"><span>SYDNEY, AUSTRALIA</span><span data-copy-en>IDEAS HAVE NO BORDERS.</span><span data-copy-zh>想法没有边界。</span></div>
+  </section>
+
+  <section class="section work-section" id="work" aria-labelledby="work-title">
+    <div class="section-intro">
+      <div><p class="section-index">02 / SELECTED WORK</p><h2 id="work-title"><span data-copy-en>Selected<br />Work</span><span data-copy-zh>精选<br />项目</span></h2><p class="section-subtitle" data-copy-en>Real projects. Real methods.<br />Real evidence.</p><p class="section-subtitle" data-copy-zh>真实项目。真实方法。<br />真实证据。</p></div>
+      <p class="section-summary" data-copy-en>Research, business analysis, infrastructure and content systems — projects exploring how data, technology and communication can solve real problems.</p>
+      <p class="section-summary" data-copy-zh>覆盖研究、业务分析、基础设施与内容系统，探索数据、技术和沟通如何解决真实问题。</p>
+    </div>
+
+    <article class="project project-featured">
+      <a class="project-media project-media-machine" href="/work/tube-loading/" aria-label="Automatic Tube Loading System case study"><img src="/media/projects/tube-loading/official-source-02.png" alt="Automatic tube bundle loading equipment" loading="lazy" /></a>
+      <div class="project-copy">
+        <div class="project-meta"><span class="project-number">01</span><span>/ MARKET RESEARCH</span><span>FEATURED</span></div>
+        <h3>Automatic Tube Loading System</h3><p class="project-subtitle">AI-assisted Overseas Market Research</p>
+        <p data-copy-en>An independent research project covering potential buyers, overseas search keywords, competitor benchmarking, procurement flow and an Alibaba.com listing simulation.</p>
+        <p data-copy-zh>围绕潜在买家、海外搜索关键词、竞品 Benchmark、采购流程及 Alibaba.com Listing 模拟展开的独立研究项目。</p>
+        <div class="tag-list"><span>B2B</span><span>Market Research</span><span>Manufacturing</span><span>AI Tools</span></div>
+        <div class="link-row">
+          <a class="text-link" href="/work/tube-loading/"><span data-copy-en>View Case Study</span><span data-copy-zh>查看案例</span><ArrowIcon /></a>
+          <a class="text-link" href="/projects/tube-loading/index.html"><span data-copy-en>Interactive Research</span><span data-copy-zh>交互式研究</span><ArrowIcon /></a>
+          <a class="text-link" href="/downloads/tube-loading-research.pdf" download="tube-loading-research.pdf"><span data-copy-en>Download PDF</span><span data-copy-zh>下载 PDF</span><ArrowIcon /></a>
+        </div>
+      </div>
+    </article>
+
+    <div class="supporting-grid">
+      <article class="project project-zhengjing">
+        <div class="project-copy"><div class="project-meta"><span class="project-number">02</span><span>/ BUSINESS DATA</span></div><h3>Zhengjing Machinery Analysis Model</h3><p class="project-subtitle">Business Data & Capacity Analysis</p><p data-copy-en>A public-safe view of a manufacturing analysis model: framework, nine-sheet structure and method only. No operating values are published.</p><p data-copy-zh>制造业经营分析模型的公开安全版本：仅展示框架、九工作表结构与方法，不公开任何经营数值。</p></div>
+        <div class="sheet-map" aria-label="Nine-sheet workbook structure">{sheets.map(([number, zh, en]) => <div class="sheet-row"><span>{number}</span><strong data-copy-en>{en}</strong><strong data-copy-zh>{zh}</strong></div>)}</div>
+      </article>
+      <article class="project project-cloud">
+        <div class="project-copy"><div class="project-meta"><span class="project-number">03</span><span>/ INFRASTRUCTURE</span></div><h3>Cloud Mail</h3><p class="project-subtitle">Personal Email Infrastructure</p><p data-copy-en>A serverless personal email system built with Cloudflare Workers, D1, KV, custom-domain configuration and delivery event tracking.</p><p data-copy-zh>基于 Cloudflare Workers、D1、KV、自定义域名与投递事件追踪搭建的 Serverless 个人邮件系统。</p><a class="text-link" href="https://mail.edshunde.com/" target="_blank" rel="noopener noreferrer"><span data-copy-en>Open Live Project</span><span data-copy-zh>访问在线项目</span><ArrowIcon direction="up-right" /></a></div>
+        <a class="project-media project-media-mail" href="https://mail.edshunde.com/" target="_blank" rel="noopener noreferrer"><img src="/media/projects/cloud-mail/login.png" alt="Cloud Mail login screen" loading="lazy" /></a>
+      </article>
+    </div>
+
+    <article class="project project-workflow" id="workflow">
+      <div class="project-copy"><div class="project-meta"><span class="project-number">04</span><span>/ WORKFLOW + CONTENT</span></div><h3>AI-assisted Documentary Content Workflow</h3><p class="project-subtitle">Content Workflow / English Content Operations</p><p data-copy-en>A documented workflow from topic research and English scripting to filming, editing, review and cross-platform publishing.</p><p data-copy-zh>从选题研究、英文脚本到拍摄、剪辑、复核与跨平台发布的完整内容 Workflow。</p><div class="link-row"><a class="text-link" href="/downloads/documentary-workflow.pdf" download="documentary-workflow.pdf"><span data-copy-en>Download Workflow PDF</span><span data-copy-zh>下载 Workflow PDF</span><ArrowIcon /></a><a class="text-link" href="https://www.youtube.com/@Edward-Hkk" target="_blank" rel="noopener noreferrer">YouTube <ArrowIcon direction="up-right" /></a><a class="text-link" href="https://v.douyin.com/BLZYP3ukbx8/" target="_blank" rel="noopener noreferrer">Douyin <ArrowIcon direction="up-right" /></a></div></div>
+      <div class="workflow-media"><a href="https://www.youtube.com/@Edward-Hkk" target="_blank" rel="noopener noreferrer" aria-label="View Edward Hu's YouTube channel"><img src="/media/projects/workflow/youtube.png" alt="YouTube documentary content evidence" loading="lazy" /></a><a href="https://v.douyin.com/BLZYP3ukbx8/" target="_blank" rel="noopener noreferrer" aria-label="View Edward Hu's Douyin profile"><img src="/media/projects/workflow/douyin.png" alt="Douyin content publishing evidence" loading="lazy" /></a></div>
+    </article>
+
+    <div class="resource-grid" id="resources">
+      <article class="resource-feature"><a class="resource-media-link" href="/downloads/b2b-foreign-trade-beginner-handbook.pdf" download="b2b-foreign-trade-beginner-handbook.pdf" aria-label="Download B2B Foreign Trade Beginner Handbook"><img src="/media/resources/b2b-handbook-cover.png" alt="B2B Foreign Trade Beginner Handbook cover" loading="lazy" /></a><div><div class="project-meta"><span class="project-number">05</span><span>/ RESOURCE</span></div><h3><span data-copy-en>B2B Foreign Trade Beginner Handbook</span><span data-copy-zh>B2B 外贸零基础入门手册</span></h3><p data-copy-en>A 20-page introductory resource. Companies, buyers, prices, quantities and transaction scenarios inside are clearly labelled teaching examples.</p><p data-copy-zh>一份 20 页的入门资料，其中公司、买家、价格、数量及交易情境均明确标注为教学示例。</p><a class="text-link" href="/downloads/b2b-foreign-trade-beginner-handbook.pdf" download="b2b-foreign-trade-beginner-handbook.pdf"><span data-copy-en>Download Handbook</span><span data-copy-zh>下载手册</span><ArrowIcon /></a></div></article>
+      <article class="shawnway-item"><a class="resource-media-link" href="https://www.shawnwaytalent.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Shawnway Talent"><img src="/media/resources/shawnway-logo.png" alt="Shawnway Talent company logo" loading="lazy" /></a><div class="project-meta"><span class="project-number">06</span><span>/ B2B CONTENT</span></div><h3>Shawnway Talent</h3><p class="project-subtitle">B2B Content Planning</p><p data-copy-en>Content planning context for recruitment and HR-related B2B topics. No undocumented outcome is claimed.</p><p data-copy-zh>围绕招聘与 HR 类 B2B 议题的内容策划项目背景，不展示未经证实的成果。</p><a class="text-link" href="https://www.shawnwaytalent.com/" target="_blank" rel="noopener noreferrer"><span data-copy-en>View Company</span><span data-copy-zh>访问公司官网</span><ArrowIcon direction="up-right" /></a></article>
+    </div>
+  </section>
+
+  <section class="section about-section" id="about" aria-labelledby="about-title">
+    <div class="about-lead">
+      <div class="about-copy"><p class="section-index">04 / ABOUT</p><h2 id="about-title"><span data-copy-en>About Edward.</span><span data-copy-zh>关于 Edward。</span></h2><p class="about-statement" data-copy-en>I'm interested in the space where business, technology and communication meet.</p><p class="about-statement" data-copy-zh>我关注商业、技术与沟通相遇的地方。</p><p data-copy-en>I use AI-assisted workflows to explore practical questions across cross-border research, business data and documentary content.</p><p data-copy-zh>我使用 AI-assisted workflow 处理跨境研究、业务数据与纪录片内容中的实际问题。</p><a class="button" href="/downloads/edward-hu-resume.pdf" download="edward-hu-resume.pdf"><span data-copy-en>DOWNLOAD RESUME PDF</span><span data-copy-zh>下载简历 PDF</span><ArrowIcon /></a></div>
+      <div class="portrait-frame"><img src="/media/identity/formal-portrait.png" alt="Formal portrait of Edward Hu" loading="lazy" /></div>
+      <blockquote><span data-copy-en>“Stay curious.<br />Build something useful.”</span><span data-copy-zh>“保持好奇，<br />做有用的事。”</span></blockquote>
+    </div>
+    <div class="capability-strip"><p class="strip-title"><span data-copy-en>WHAT I WORK ACROSS</span><span data-copy-zh>我的工作方向</span></p><div class="capability-grid">{capabilities.map(([number, enTitle, zhTitle, enText, zhText]) => <article><span class="capability-number">{number}</span><h3 data-copy-en>{enTitle}</h3><h3 data-copy-zh>{zhTitle}</h3><p data-copy-en>{enText}</p><p data-copy-zh>{zhText}</p></article>)}</div></div>
+    <div class="about-details">
+      <div class="method-block"><p class="strip-title"><span data-copy-en>HOW I WORK</span><span data-copy-zh>我的工作方式</span></p><ol class="method-list"><li><span>01</span><strong data-copy-en>Understand</strong><strong data-copy-zh>理解</strong></li><li><span>02</span><strong data-copy-en>Structure</strong><strong data-copy-zh>结构化</strong></li><li><span>03</span><strong data-copy-en>Build</strong><strong data-copy-zh>构建</strong></li><li><span>04</span><strong data-copy-en>Test</strong><strong data-copy-zh>验证</strong></li><li><span>05</span><strong data-copy-en>Refine</strong><strong data-copy-zh>迭代</strong></li></ol></div>
+      <div class="language-block"><p class="strip-title"><span data-copy-en>LANGUAGE</span><span data-copy-zh>语言</span></p><div class="language-evidence"><div><strong>English</strong><span>TOEFL iBT 100<br />CEFR C1</span></div><div><strong>中文</strong><span>Native</span></div></div><a class="text-link" href="/downloads/toefl-score-redacted.pdf" download="toefl-score-redacted.pdf"><span data-copy-en>Download redacted proof</span><span data-copy-zh>下载脱敏证明</span><ArrowIcon /></a></div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact" aria-labelledby="contact-title">
+    <p class="section-index">05 / CONTACT</p><h2 id="contact-title"><span data-copy-en>Let's talk about<br />useful work.</span><span data-copy-zh>一起讨论<br />有价值的工作。</span></h2>
+    <div class="contact-grid"><a href="mailto:Edward@edshunde.com"><span>Email</span><strong>Edward@edshunde.com</strong><ArrowIcon direction="up-right" /></a><div><span>WeChat</span><strong>EDshunde</strong></div><a href="https://www.youtube.com/@Edward-Hkk" target="_blank" rel="noopener noreferrer"><span>YouTube</span><strong>@Edward-Hkk</strong><ArrowIcon direction="up-right" /></a><a href="https://v.douyin.com/BLZYP3ukbx8/" target="_blank" rel="noopener noreferrer"><span>Douyin</span><strong>ED川页</strong><ArrowIcon direction="up-right" /></a></div>
+    <footer><span>EDWARD HU · PERSONAL PORTFOLIO</span><a href="#top"><span data-copy-en>BACK TO TOP</span><span data-copy-zh>返回顶部</span> <ArrowIcon direction="up-right" /></a></footer>
+  </section>
+</BaseLayout>

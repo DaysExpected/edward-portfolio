@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArrowIcon from '../../components/ArrowIcon.astro';
+
+const anchors = [
+  ['01', 'Overview', '概览', 'overview'], ['02', 'Context', '背景', 'context'],
+  ['03', 'Problem', '问题', 'problem'], ['04', 'Research Approach', '研究方法', 'approach'],
+  ['05', 'Buyer Profiles', '买家画像', 'buyers'], ['06', 'Search & Keywords', '搜索与关键词', 'keywords'],
+  ['07', 'Competitor Landscape', '竞品结构', 'competitors'], ['08', 'Procurement Logic', '采购逻辑', 'procurement'],
+  ['09', 'Output & Limits', '产出与边界', 'output'],
+];
+---
+
+<BaseLayout page="work" title="Automatic Tube Loading System — Edward Hu" description="An evidence-led case study of Edward Hu's AI-assisted overseas B2B market research for an automatic tube loading system.">
+  <article class="case-page" id="overview">
+    <section class="case-hero">
+      <div class="case-title-block">
+        <a class="back-link" href="/#work"><ArrowIcon direction="left" /><span data-copy-en>BACK TO WORK</span><span data-copy-zh>返回项目</span></a>
+        <p class="section-index">01 / MARKET RESEARCH</p>
+        <h1>Automatic Tube<br />Loading System</h1>
+        <p class="case-deck">AI-assisted Overseas Market Research</p>
+        <p data-copy-en>Exploring potential buyers, overseas search behavior, competitor positioning and procurement logic for an industrial automatic tube loading system.</p>
+        <p data-copy-zh>围绕工业自动管材上料系统，研究潜在买家、海外搜索行为、竞品定位与采购逻辑。</p>
+        <div class="case-actions"><a class="button" href="/projects/tube-loading/index.html"><span data-copy-en>VIEW INTERACTIVE RESEARCH</span><span data-copy-zh>查看交互式研究</span><ArrowIcon /></a><a class="text-link" href="/downloads/tube-loading-research.pdf" download="tube-loading-research.pdf"><span data-copy-en>DOWNLOAD PDF</span><span data-copy-zh>下载 PDF</span><ArrowIcon /></a></div>
+      </div>
+      <figure class="case-hero-media"><img src="/media/projects/tube-loading/official-source-02.png" alt="Automatic bundle loader for tube laser cutting" /><figcaption><span data-copy-en>Industry reference image · source attribution inside the interactive research page.</span><span data-copy-zh>行业参考图 · 来源标注见交互式研究页。</span></figcaption></figure>
+    </section>
+
+    <dl class="case-facts">
+      <div><dt>ROLE</dt><dd><span data-copy-en>Research / Analysis<br />AI-assisted workflow</span><span data-copy-zh>研究 / 分析<br />AI 辅助 Workflow</span></dd></div>
+      <div><dt>FOCUS</dt><dd>B2B<br />Manufacturing<br />Global Market</dd></div>
+      <div><dt>DELIVERABLES</dt><dd><span data-copy-en>Interactive Research Page<br />PDF Case Study</span><span data-copy-zh>交互式研究页<br />PDF 案例</span></dd></div>
+      <div><dt>STATUS</dt><dd><span data-copy-en>Independent Project</span><span data-copy-zh>独立项目</span></dd></div>
+    </dl>
+
+    <nav class="case-nav" aria-label="Case study sections">{anchors.map(([number, en, zh, id]) => <a href={`#${id}`}><span>{number}</span><strong data-copy-en>{en}</strong><strong data-copy-zh>{zh}</strong></a>)}</nav>
+
+    <section class="story-section story-context" id="context">
+      <div class="story-heading"><p class="section-index">02 / CONTEXT</p><h2><span data-copy-en>Industrial Automation<br />in a Global Market</span><span data-copy-zh>全球市场中的<br />工业自动化</span></h2></div>
+      <div class="story-copy"><p data-copy-en>The project begins with a specific manufacturing product and asks how it can be understood in overseas B2B markets. It connects product form, buyer needs, search language and procurement concerns without claiming sales or market-size outcomes.</p><p data-copy-zh>项目从一个具体制造业产品出发，研究它在海外 B2B 市场中如何被理解，并连接产品形态、买家需求、搜索语言与采购关注点；不对销量或市场规模作推断。</p></div>
+      <figure><img src="/media/projects/tube-loading/official-source-01.png" alt="Laser tube cutting line layout" loading="lazy" /><figcaption>BLM GROUP · source recorded in the project manifest</figcaption></figure>
+    </section>
+
+    <section class="story-split" id="problem">
+      <div class="story-heading"><p class="section-index">03 / PROBLEM</p><h2><span data-copy-en>Finding Real Questions<br />Across Markets</span><span data-copy-zh>从海外市场中<br />找到真实问题</span></h2><p data-copy-en>The research is organized around five questions rather than an unsupported market prediction.</p><p data-copy-zh>研究围绕五个问题展开，而不是给出缺乏证据的市场预测。</p></div>
+      <ol class="question-list"><li><span>01</span><span data-copy-en>Which overseas markets show relevant demand signals?</span><span data-copy-zh>哪些海外市场呈现相关需求信号？</span></li><li><span>02</span><span data-copy-en>Who are the target buyers?</span><span data-copy-zh>目标买家是谁？</span></li><li><span>03</span><span data-copy-en>How do buyers search for solutions?</span><span data-copy-zh>买家如何搜索解决方案？</span></li><li><span>04</span><span data-copy-en>How do competitors communicate product value?</span><span data-copy-zh>竞品如何表达产品价值？</span></li><li><span>05</span><span data-copy-en>What information shapes procurement decisions?</span><span data-copy-zh>哪些信息影响采购决策？</span></li></ol>
+    </section>
+
+    <section class="approach-section" id="approach">
+      <div class="story-heading"><p class="section-index">04 / RESEARCH APPROACH</p><h2><span data-copy-en>A Structured,<br />AI-assisted Workflow</span><span data-copy-zh>结构化的<br />AI 辅助研究流程</span></h2></div>
+      <ol class="approach-flow"><li><span>01</span><strong data-copy-en>Buyer Research</strong><strong data-copy-zh>买家研究</strong></li><li><span>02</span><strong data-copy-en>Keyword Research</strong><strong data-copy-zh>关键词研究</strong></li><li><span>03</span><strong data-copy-en>Competitor Scan</strong><strong data-copy-zh>竞品扫描</strong></li><li><span>04</span><strong data-copy-en>Procurement Logic</strong><strong data-copy-zh>采购逻辑</strong></li><li><span>05</span><strong data-copy-en>Synthesis</strong><strong data-copy-zh>综合输出</strong></li></ol>
+      <p data-copy-en>AI tools supported source discovery, keyword expansion and information classification. Key facts were checked against original public sources.</p><p data-copy-zh>AI 工具用于辅助来源发现、关键词扩展与信息分类，关键事实再回到公开原始来源复核。</p>
+    </section>
+
+    <section class="evidence-grid" id="buyers">
+      <div><p class="section-index">05 / BUYER PROFILES</p><h2><span data-copy-en>Buyer needs before buyer labels.</span><span data-copy-zh>先理解需求，再定义买家。</span></h2></div>
+      <div class="evidence-list"><article><span>01</span><h3><span data-copy-en>Tube processors</span><span data-copy-zh>管材加工企业</span></h3><p data-copy-en>Production fit, material profiles, line integration and labor requirements.</p><p data-copy-zh>关注生产适配、材料截面、产线集成与人工需求。</p></article><article><span>02</span><h3><span data-copy-en>Machine builders & integrators</span><span data-copy-zh>设备商与集成商</span></h3><p data-copy-en>Interface, layout, support modules and customization boundaries.</p><p data-copy-zh>关注接口、布局、配套模块与定制边界。</p></article><article><span>03</span><h3><span data-copy-en>Distributors & project buyers</span><span data-copy-zh>经销商与项目采购方</span></h3><p data-copy-en>Commercial terms, supplier verification, service and delivery coordination.</p><p data-copy-zh>关注商务条款、供应商核验、服务与交付协同。</p></article></div>
+    </section>
+
+    <section class="evidence-grid" id="keywords">
+      <div><p class="section-index">06 / SEARCH & KEYWORDS</p><h2><span data-copy-en>Translate the product<br />into buyer language.</span><span data-copy-zh>把产品翻译成<br />买家的搜索语言。</span></h2></div>
+      <div class="keyword-field"><span>automatic tube loading system</span><span>bundle loader</span><span>tube laser cutting automation</span><span>automatic feeding system</span><span>tube loading and unloading</span><span>laser tube cutter loader</span></div>
+    </section>
+
+    <section class="competitor-section" id="competitors">
+      <div class="story-heading"><p class="section-index">07 / COMPETITOR LANDSCAPE</p><h2><span data-copy-en>Benchmark the language<br />of established suppliers.</span><span data-copy-zh>比较成熟供应商的<br />产品表达方式。</span></h2><p data-copy-en>Public materials from six domestic and international equipment suppliers were organized into a comparative benchmark.</p><p data-copy-zh>将六家国内外设备厂商的公开资料整理为 Competitive Benchmark。</p></div>
+      <div class="competitor-list"><span>TRUMPF</span><span>BLM GROUP</span><span>Bystronic</span><span>Bodor</span><span>HSG Laser</span><span>HGLaser</span></div>
+      <figure><img src="/media/projects/tube-loading/official-source-03.png" alt="Automatic tube sorting and feeding system" loading="lazy" /><figcaption>Golden Laser · source recorded in the project manifest</figcaption></figure>
+    </section>
+
+    <section class="story-split" id="procurement">
+      <div class="story-heading"><p class="section-index">08 / PROCUREMENT LOGIC</p><h2><span data-copy-en>Turn research into<br />better inquiry questions.</span><span data-copy-zh>把研究转化为<br />更有效的询盘问题。</span></h2></div>
+      <ul class="procurement-list"><li><span data-copy-en>Buyer drawings and tube profiles</span><span data-copy-zh>买家图纸与管材截面</span></li><li><span data-copy-en>Size, length and load range</span><span data-copy-zh>尺寸、长度与载荷范围</span></li><li><span data-copy-en>Machine interface and line layout</span><span data-copy-zh>设备接口与产线布局</span></li><li><span data-copy-en>Separation, feeding and support modules</span><span data-copy-zh>分料、上料与随动支撑模块</span></li><li><span data-copy-en>Commercial terms, service and delivery</span><span data-copy-zh>商务条款、服务与交付</span></li></ul>
+    </section>
+
+    <section class="output-section" id="output">
+      <div><p class="section-index">09 / OUTPUT & LIMITS</p><h2><span data-copy-en>An inspectable output,<br />with explicit boundaries.</span><span data-copy-zh>可检查的产出，<br />以及清晰的边界。</span></h2></div>
+      <div><p data-copy-en>The final output combines buyer classification, overseas keywords, competitor benchmarking, an inquiry-information framework and a simulated Alibaba.com listing in an interactive page.</p><p data-copy-zh>最终产出在交互式页面中整合买家分类、海外关键词、竞品 Benchmark、询盘信息框架与模拟 Alibaba.com Listing。</p><p data-copy-en>This is an independent learning and research project based on public information. It does not represent a partnership, quotation, technical commitment or verified commercial result.</p><p data-copy-zh>本项目是基于公开资料的个人学习与研究，不代表与相关厂商存在合作，也不构成报价、技术承诺或已验证的商业成果。</p><div class="case-actions"><a class="button" href="/projects/tube-loading/"><span data-copy-en>OPEN INTERACTIVE RESEARCH</span><span data-copy-zh>打开交互式研究</span><ArrowIcon /></a><a class="text-link" href="/#work"><span data-copy-en>Back to Selected Work</span><span data-copy-zh>返回精选项目</span><ArrowIcon direction="left" /></a></div></div>
+    </section>
+  </article>
+</BaseLayout>
