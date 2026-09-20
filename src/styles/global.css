@@ -295,15 +295,29 @@ figcaption { margin-top: 7px; color: var(--muted); font-size: 9px; letter-spacin
   .site-header { padding-top: 16px; }
   .wordmark strong { font-size: 16px; }
   .wordmark span { font-size: 6px; letter-spacing: .25em; }
-  .hero { min-height: 760px; align-items: end; }
-  .hero-media, .hero-reduced-poster { object-position: 63% center; }
-  .hero-edge { background: linear-gradient(180deg, rgba(6,16,24,.12) 0%, rgba(6,16,24,.08) 35%, rgba(6,16,24,.82) 74%, rgba(6,16,24,.9) 100%); }
-  .hero-content { padding: 330px var(--pad) 86px; }
-  .hero-kicker { margin-bottom: 18px; }
-  .hero h1 { font-size: clamp(58px, 18vw, 82px); }
-  .hero-lead { font-size: 27px; }
-  .hero-support { font-size: 13px; }
-  .hero-location { display: none; }
+  body[data-page="home"] .site-header { padding: 6px 4vw; }
+  body[data-page="home"] .wordmark { gap: 2px; }
+  body[data-page="home"] .wordmark strong { font-size: clamp(9px, 2.55vw, 16px); }
+  body[data-page="home"] .wordmark span { font-size: clamp(4px, 1.1vw, 7px); letter-spacing: .28em; }
+  body[data-page="home"] .header-controls { gap: 6px; }
+  body[data-page="home"] .language-switch { gap: 5px; padding: 2px 7px 1px; }
+  body[data-page="home"] .language-switch button { padding: 2px 0 4px; font-size: clamp(7px, 1.8vw, 10px); }
+  body[data-page="home"] .menu-button { min-height: 29px; padding: 5px 9px; font-size: clamp(7px, 1.8vw, 10px); }
+  body[data-page="home"] .header-actions { top: 42px; right: 4vw; width: min(190px, 92vw); padding: 14px; gap: 10px; }
+  body[data-page="home"] .header-actions nav { gap: 6px; }
+  .hero { width: 100%; min-height: 0; height: auto; aspect-ratio: 16 / 9; align-items: center; }
+  .hero-media, .hero-reduced-poster { object-fit: cover; object-position: 55% center; }
+  .hero-edge { background: linear-gradient(90deg, rgba(6,16,24,.75) 0%, rgba(6,16,24,.48) 25%, transparent 55%); }
+  .hero-content { padding: 12.3vw 4vw 3vw; }
+  .hero-kicker { margin-bottom: 2vw; padding-right: 5.7vw; font-size: clamp(6px, 1.65vw, 9px); }
+  .hero-kicker::after { width: 4.2vw; }
+  .hero h1, .hero-lead, .hero-support { max-width: 52%; }
+  .hero h1 { margin-bottom: 1px; font-size: 8vw; }
+  .hero-lead { margin: 1.3vw 0 .5vw; font-size: 3vw; }
+  .hero-support { margin-bottom: 1.8vw; font-size: clamp(7px, 1.85vw, 11px); line-height: 1.3; }
+  .hero-content > .button { min-height: 28px; padding: 0 2.6vw; gap: 4vw; font-size: clamp(6.5px, 1.75vw, 9px); }
+  .hero-location { left: 4vw; bottom: .8vw; display: grid; gap: 1px; font-size: clamp(4px, 1.05vw, 7px); }
+  .hero-replay { top: 42px; right: 4vw; min-height: 25px; padding: 4px 7px; gap: 5px; font-size: clamp(6px, 1.5vw, 8px); }
   .section { padding-top: 72px; padding-bottom: 72px; }
   .section-intro { grid-template-columns: 1fr; gap: 28px; }
   .section-intro h2 { font-size: 64px; }
